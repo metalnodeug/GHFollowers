@@ -23,6 +23,7 @@ class GHFButton: UIButton {
         super.init(frame: .zero)
         self.backgroundColor = bgColor
         self.setTitle(title, for: .normal)
+        configure()
     }
     
     private func configure() {
