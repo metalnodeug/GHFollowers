@@ -18,6 +18,7 @@ class SearchVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         configureUI()
+        createDismissTappedKeyboardGesture()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -65,5 +66,10 @@ class SearchVC: UIViewController {
             callButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
             callButton.heightAnchor.constraint(equalToConstant: 50)
         ])
+    }
+
+    private func createDismissTappedKeyboardGesture() {
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tap)
     }
 }
