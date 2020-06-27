@@ -13,6 +13,7 @@
 		6F8E942024A7C8DE0019538E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F8E941E24A7C8DE0019538E /* LaunchScreen.storyboard */; };
 		6F8E942824A7CBC50019538E /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8E942724A7CBC50019538E /* SearchVC.swift */; };
 		6F8E942A24A7CC660019538E /* FavoritesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8E942924A7CC660019538E /* FavoritesListVC.swift */; };
+		6F8E942C24A7D0F20019538E /* GHFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8E942B24A7D0F20019538E /* GHFButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		6F8E942124A7C8DE0019538E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F8E942724A7CBC50019538E /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		6F8E942924A7CC660019538E /* FavoritesListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListVC.swift; sourceTree = "<group>"; };
+		6F8E942B24A7D0F20019538E /* GHFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHFButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				6F8E941324A7C8DC0019538E /* AppDelegate.swift */,
 				6F8E941524A7C8DC0019538E /* SceneDelegate.swift */,
+				6F8E942B24A7D0F20019538E /* GHFButton.swift */,
 				6F8E941C24A7C8DE0019538E /* Assets.xcassets */,
 				6F8E941E24A7C8DE0019538E /* LaunchScreen.storyboard */,
 				6F8E942124A7C8DE0019538E /* Info.plist */,
@@ -140,6 +143,7 @@
 				6F8E942A24A7CC660019538E /* FavoritesListVC.swift in Sources */,
 				6F8E942824A7CBC50019538E /* SearchVC.swift in Sources */,
 				6F8E941424A7C8DC0019538E /* AppDelegate.swift in Sources */,
+				6F8E942C24A7D0F20019538E /* GHFButton.swift in Sources */,
 				6F8E941624A7C8DC0019538E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
