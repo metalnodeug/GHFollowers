@@ -36,6 +36,7 @@ class GHFTextField: UITextField {
         self.backgroundColor = .tertiarySystemBackground
         self.autocorrectionType = .no
         self.placeholder = "Enter a username"
+        self.returnKeyType = .go
     }
 
 }

@@ -26,6 +26,18 @@ class SearchVC: UIViewController {
         navigationController?.isNavigationBarHidden = true
     }
 
+    private func createDismissTappedKeyboardGesture() {
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tap)
+    }
+
+    @objc private func pushFollowerListVC() {
+        let followerListVC = FollowerListVC()
+        followerListVC.username = usernameTextField.text
+        followerListVC.title = usernameTextField.text
+        navigationController?.pushViewController(followerListVC, animated: true)
+    }
+
     private func configureUI() {
         configureLogoImageView()
         configureTextField()
@@ -48,6 +60,7 @@ class SearchVC: UIViewController {
 
     private func configureTextField() {
         view.addSubview(usernameTextField)
+        usernameTextField.delegate = self
 
         NSLayoutConstraint.activate([
             usernameTextField.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 48),
@@ -59,6 +72,7 @@ class SearchVC: UIViewController {
 
     private func configureCallButton() {
         view.addSubview(callButton)
+        callButton.addTarget(self, action: #selector(pushFollowerListVC), for: .touchUpInside)
 
         NSLayoutConstraint.activate([
             callButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50),
@@ -68,8 +82,11 @@ class SearchVC: UIViewController {
         ])
     }
 
-    private func createDismissTappedKeyboardGesture() {
-        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
-        view.addGestureRecognizer(tap)
+}
+
+extension SearchVC: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        pushFollowerListVC()
+        return true
     }
 }
