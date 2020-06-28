@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F4858BA24A9195900D65809 /* GHFTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4858B924A9195900D65809 /* GHFTitleLabel.swift */; };
 		6F7D7E6324A7FD3F00A7E32A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7D7E6224A7FD3F00A7E32A /* Constants.swift */; };
 		6F7D7E6524A8095A00A7E32A /* FollowerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7D7E6424A8095A00A7E32A /* FollowerListVC.swift */; };
 		6F8E941424A7C8DC0019538E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8E941324A7C8DC0019538E /* AppDelegate.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6F4858B924A9195900D65809 /* GHFTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHFTitleLabel.swift; sourceTree = "<group>"; };
 		6F7D7E6224A7FD3F00A7E32A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6F7D7E6424A8095A00A7E32A /* FollowerListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListVC.swift; sourceTree = "<group>"; };
 		6F8E941024A7C8DC0019538E /* GHFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +74,7 @@
 				6F8E941E24A7C8DE0019538E /* LaunchScreen.storyboard */,
 				6F8E942124A7C8DE0019538E /* Info.plist */,
 				6F8E942724A7CBC50019538E /* SearchVC.swift */,
+				6F4858B924A9195900D65809 /* GHFTitleLabel.swift */,
 				6F7D7E6224A7FD3F00A7E32A /* Constants.swift */,
 				6F8E942924A7CC660019538E /* FavoritesListVC.swift */,
 				6F7D7E6424A8095A00A7E32A /* FollowerListVC.swift */,
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F8E942A24A7CC660019538E /* FavoritesListVC.swift in Sources */,
+				6F4858BA24A9195900D65809 /* GHFTitleLabel.swift in Sources */,
 				6F8E942824A7CBC50019538E /* SearchVC.swift in Sources */,
 				6F8E941424A7C8DC0019538E /* AppDelegate.swift in Sources */,
 				6F8E942C24A7D0F20019538E /* GHFButton.swift in Sources */,
