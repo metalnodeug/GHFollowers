@@ -75,7 +75,7 @@ class GHFAlertVC: UIViewController {
         actionButton.addTarget(self, action: #selector(dismissVC), for: .touchUpInside)
 
         NSLayoutConstraint.activate([
-            actionButton.bottomAnchor.constraint(equalToSystemSpacingBelow: containerView.bottomAnchor, multiplier: -padding),
+            actionButton.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -padding),
             actionButton.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: padding),
             actionButton.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -padding),
             actionButton.heightAnchor.constraint(equalToConstant: 44)
