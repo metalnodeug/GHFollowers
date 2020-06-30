@@ -9,5 +9,6 @@
 import Foundation
 
 enum GHFImage {
-     static let ghlogo = "gh-logo"
- }
+    static let ghlogo = "gh-logo"
+    static let placeHolder = "avatar-placeholder"
+}
