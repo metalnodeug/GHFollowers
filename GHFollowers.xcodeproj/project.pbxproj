@@ -147,9 +147,9 @@
 			isa = PBXGroup;
 			children = (
 				6F8E942124A7C8DE0019538E /* Info.plist */,
+				6F5D33EC24AA66FC0057249B /* Support */,
 				6FAD677B24AB322C007FB1BE /* Utilities */,
 				6F5D33EE24AA6D330057249B /* Model */,
-				6F5D33EC24AA66FC0057249B /* Support */,
 				6F5D33ED24AA670E0057249B /* Constants */,
 				6F5D33EB24AA669A0057249B /* Extensions */,
 				6F5D33EA24AA66670057249B /* Custom Views */,
