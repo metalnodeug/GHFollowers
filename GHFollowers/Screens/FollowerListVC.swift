@@ -61,7 +61,6 @@ class FollowerListVC: UIViewController {
                 if followers.count < 100 { self.hasMoreFollowers = false }
                 self.followers.append(contentsOf: followers)
 
-                self.followers = []
                 if self.followers.isEmpty {
                     let message = GHFText.emptyStateMessage
                     DispatchQueue.main.async { self.showEmptyStateView(with: message, in: self.view) }
