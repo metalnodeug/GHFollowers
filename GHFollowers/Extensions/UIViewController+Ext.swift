@@ -28,12 +28,10 @@ extension UIViewController {
         containerView.backgroundColor = .systemBackground
         containerView.alpha = 0
 
-        UIView.animate(withDuration: 0.25) {
-            containerView.alpha = 0.8
-        }
+        UIView.animate(withDuration: 0.25) { containerView.alpha = 0.8 }
 
         let activityIndicator = UIActivityIndicatorView(style: .large)
-        view.addSubview(activityIndicator)
+        containerView.addSubview(activityIndicator)
 
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
 
