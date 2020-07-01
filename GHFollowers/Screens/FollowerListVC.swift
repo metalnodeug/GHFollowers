@@ -26,7 +26,7 @@ class FollowerListVC: UIViewController {
         super.viewDidLoad()
         configureCollectionView()
         configureViewController()
-        getFollower()
+        getFollower(username: username, page: page)
         configureDataSource()
         updateData()
     }
