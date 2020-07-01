@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F42F2D424AC84200030ECCB /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F42F2D324AC84200030ECCB /* UIHelper.swift */; };
 		6F4858BA24A9195900D65809 /* GHFTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4858B924A9195900D65809 /* GHFTitleLabel.swift */; };
 		6F4858BC24A91C1F00D65809 /* GHFBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4858BB24A91C1F00D65809 /* GHFBodyLabel.swift */; };
 		6F4858BE24A91D5C00D65809 /* GHFAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4858BD24A91D5C00D65809 /* GHFAlertVC.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6F42F2D324AC84200030ECCB /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		6F4858B924A9195900D65809 /* GHFTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHFTitleLabel.swift; sourceTree = "<group>"; };
 		6F4858BB24A91C1F00D65809 /* GHFBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHFBodyLabel.swift; sourceTree = "<group>"; };
 		6F4858BD24A91D5C00D65809 /* GHFAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHFAlertVC.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				6FAD677C24AB3259007FB1BE /* ErrorMessage.swift */,
+				6F42F2D324AC84200030ECCB /* UIHelper.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				6F7D7E6324A7FD3F00A7E32A /* Constants.swift in Sources */,
 				6F8E941624A7C8DC0019538E /* SceneDelegate.swift in Sources */,
 				6FAD677D24AB3259007FB1BE /* ErrorMessage.swift in Sources */,
+				6F42F2D424AC84200030ECCB /* UIHelper.swift in Sources */,
 				6F6D44F624AB1C6F00A60D9C /* NetworkManager.swift in Sources */,
 				6F7D7E6524A8095A00A7E32A /* FollowerListVC.swift in Sources */,
 				6F8E942E24A7D64D0019538E /* GHFTextField.swift in Sources */,
