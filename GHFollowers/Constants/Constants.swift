@@ -13,3 +13,10 @@ enum GHFImage {
     static let placeHolder = "avatar-placeholder"
     static let emptyStateLogo = "empty-state-logo"
 }
+
+enum GHFText {
+    static let emptyStateMessage = "This user doesn't have any followers. Go follow them 🙃"
+    static let badAlert = "Bad Stuff Happend"
+    static let emptyUsername = "Empty Username"
+    static let emptyUsernameMessage = "Please enter a username. We need to know who to look for 😉."
+}

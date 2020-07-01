@@ -63,12 +63,12 @@ class FollowerListVC: UIViewController {
 
                 self.followers = []
                 if self.followers.isEmpty {
-                    let message = "This user doesn't have any followers. Go follow them 🙃"
+                    let message = GHFText.emptyStateMessage
                     DispatchQueue.main.async { self.showEmptyStateView(with: message, in: self.view) }
                 }
                 self.updateData()
             case .failure(let error):
-                self.presentGHFAlertOnMainThread(title: "Bad Stuff Happend", message: error.rawValue, buttonTitle: "Ok")
+                self.presentGHFAlertOnMainThread(title: GHFText.badAlert, message: error.rawValue, buttonTitle: "Ok")
             }
         }
     }
