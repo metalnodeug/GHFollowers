@@ -39,4 +39,28 @@ class GHFTextField: UITextField {
         self.returnKeyType = .go
     }
 
+    func showEmptyInputAnimation() {
+        let shake = CABasicAnimation(keyPath: "position")
+        shake.duration = 0.07
+        shake.repeatCount = 2
+        shake.autoreverses = true
+
+        let fromPoint = CGPoint(x: center.x - 10, y: center.y)
+        let fromValue = NSValue(cgPoint: fromPoint)
+
+        let toPoint = CGPoint(x: center.x + 10, y: center.y)
+        let toValue = NSValue(cgPoint: toPoint)
+
+        shake.fromValue = fromValue
+        shake.toValue = toValue
+
+        let borderColor = CABasicAnimation(keyPath: "borderColor")
+        borderColor.duration = 0.4
+        borderColor.autoreverses = true
+        borderColor.fromValue = layer.borderColor
+        borderColor.toValue = UIColor.systemRed.cgColor
+
+        self.layer.add(borderColor, forKey: nil)
+        self.layer.add(shake, forKey: nil)
+    }
 }
