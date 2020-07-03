@@ -1,8 +1,8 @@
 //
-//  ErrorMessage.swift
+//  GHFError.swift
 //  GHFollowers
 //
-//  Created by metalnodeug on 30/06/2020.
+//  Created by metalnodeug on 03/07/2020.
 //  Copyright © 2020 metalnodeug. All rights reserved.
 //
 
