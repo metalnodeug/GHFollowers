@@ -6,8 +6,6 @@
 //  Copyright © 2020 metalnodeug. All rights reserved.
 //
 
-import Foundation
-
 enum GHFImage {
     static let ghlogo = "gh-logo"
     static let placeHolder = "avatar-placeholder"
@@ -19,4 +17,8 @@ enum GHFText {
     static let badAlert = "Bad Stuff Happend"
     static let emptyUsername = "Empty Username"
     static let emptyUsernameMessage = "Please enter a username. We need to know who to look for 😉."
+}
+
+enum SFSymbols {
+    static let location = "mappin.and.ellipse"
 }
