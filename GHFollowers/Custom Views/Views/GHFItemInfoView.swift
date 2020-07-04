@@ -61,7 +61,7 @@ class GHFItemInfoView: UIView {
             titleLabel.text = "Public Repos"
         case .gists:
             symbolImageView.image = UIImage(systemName: SFSymbols.gists)
-            titleLabel.text = "Public Ghists"
+            titleLabel.text = "Public Gists"
         case .followers:
             symbolImageView.image = UIImage(systemName: SFSymbols.followers)
             titleLabel.text = "Followers"
