@@ -32,5 +32,10 @@ class GHFButton: UIButton {
         self.titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
         self.translatesAutoresizingMaskIntoConstraints = false
     }
+
+    func set(backgroundColor: UIColor, title: String) {
+        self.backgroundColor = backgroundColor
+        self.setTitle(title, for: .normal)
+    }
     
 }
