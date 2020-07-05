@@ -15,4 +15,5 @@ enum GHFError: String, Error {
     case invalidData = "The data receive from the server is invalid. Please try again."
     case unableToFavorite = "There was an error favoriting this user. Please try again"
     case alreadyInFavorite = "This user is already in favorite, you can't add this user too"
+    case somethingWrong = "Something went wrong."
 }

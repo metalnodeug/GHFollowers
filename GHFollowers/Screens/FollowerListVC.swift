@@ -124,15 +124,15 @@ class FollowerListVC: UIViewController {
                     guard let self = self else { return }
 
                     guard let error = error else {
-                        self.presentGHFAlertOnMainThread(title: "Success", message: "You have success favorted this user", buttonTitle: "Ok")
+                        self.presentGHFAlertOnMainThread(title: "Success", message: "You have success favorited this user", buttonTitle: "Ok")
                         return
                     }
 
-                    self.presentGHFAlertOnMainThread(title: "Something wen't wrong", message: error.rawValue, buttonTitle: "Ok")
+                    self.presentGHFAlertOnMainThread(title: GHFError.somethingWrong.rawValue, message: error.rawValue, buttonTitle: "Ok")
                 }
 
             case .failure(let error):
-                self.presentGHFAlertOnMainThread(title: "Something wen't wrong", message: error.rawValue, buttonTitle: "Ok")
+                self.presentGHFAlertOnMainThread(title: GHFError.somethingWrong.rawValue, message: error.rawValue, buttonTitle: "Ok")
             }
         }
     }
