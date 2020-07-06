@@ -84,20 +84,25 @@ class FollowerListVC: GHFDataLoadingVC {
             self.dismissLoadingView()
             
             switch result {
-            case .success(let followers):
-                if followers.count < 100 { self.hasMoreFollowers = false }
-                self.followers.append(contentsOf: followers)
+                case .success(let followers):
+                    self.updateUI(with: followers)
 
-                if self.followers.isEmpty {
-                    let message = GHFText.emptyStateMessage
-                    DispatchQueue.main.async { self.showEmptyStateView(with: message, in: self.view) }
-                }
-                self.updateData(on: self.followers)
-            case .failure(let error):
-                self.presentGHFAlertOnMainThread(title: GHFText.badAlert, message: error.rawValue, buttonTitle: "Ok")
+                case .failure(let error):
+                    self.presentGHFAlertOnMainThread(title: GHFText.badAlert, message: error.rawValue, buttonTitle: "Ok")
             }
+            self.isLoadingMoreFollowers = false
         }
-        self.isLoadingMoreFollowers = false
+    }
+
+    private func updateUI(with followers: [Follower]) {
+        if followers.count < 100 { self.hasMoreFollowers = false }
+        self.followers.append(contentsOf: followers)
+
+        if self.followers.isEmpty {
+            let message = GHFText.emptyStateMessage
+            DispatchQueue.main.async { self.showEmptyStateView(with: message, in: self.view) }
+        }
+        self.updateData(on: self.followers)
     }
     
     private func configureDataSource(){
@@ -125,26 +130,29 @@ class FollowerListVC: GHFDataLoadingVC {
             self.dismissLoadingView()
 
             switch result {
-            case .success(let user):
-                let favorite = Follower(login: user.login, avatarUrl: user.avatarUrl)
+                case .success(let user):
+                    self.addUserToFavorites(user: user)
 
-                PersistenceManager.updateWith(favorite: favorite, actionType: .add) { [weak self] error in
-                    guard let self = self else { return }
-
-                    guard let error = error else {
-                        self.presentGHFAlertOnMainThread(title: "Success", message: "You have success favorited this user", buttonTitle: "Ok")
-                        return
-                    }
-
+                case .failure(let error):
                     self.presentGHFAlertOnMainThread(title: GHFError.somethingWrong.rawValue, message: error.rawValue, buttonTitle: "Ok")
-                }
-
-            case .failure(let error):
-                self.presentGHFAlertOnMainThread(title: GHFError.somethingWrong.rawValue, message: error.rawValue, buttonTitle: "Ok")
             }
         }
     }
 
+    private func addUserToFavorites(user: User) {
+        let favorite = Follower(login: user.login, avatarUrl: user.avatarUrl)
+
+        PersistenceManager.updateWith(favorite: favorite, actionType: .add) { [weak self] error in
+            guard let self = self else { return }
+
+            guard let error = error else {
+                self.presentGHFAlertOnMainThread(title: "Success", message: "You have success favorited this user", buttonTitle: "Ok")
+                return
+            }
+
+            self.presentGHFAlertOnMainThread(title: GHFError.somethingWrong.rawValue, message: error.rawValue, buttonTitle: "Ok")
+        }
+    }
 }
 
 extension FollowerListVC: UICollectionViewDelegate {
@@ -193,6 +201,7 @@ extension FollowerListVC: UserInfoVCDelegate {
         self.username = username
         title = username
         page = 1
+        
         followers.removeAll()
         filteredFollowers.removeAll()
         collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .top, animated: true)

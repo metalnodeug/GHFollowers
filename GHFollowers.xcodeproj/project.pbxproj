@@ -102,9 +102,9 @@
 		6F5D33E924AA66220057249B /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				6F8E942924A7CC660019538E /* FavoritesListVC.swift */,
-				6F7D7E6424A8095A00A7E32A /* FollowerListVC.swift */,
 				6F8E942724A7CBC50019538E /* SearchVC.swift */,
+				6F7D7E6424A8095A00A7E32A /* FollowerListVC.swift */,
+				6F8E942924A7CC660019538E /* FavoritesListVC.swift */,
 				6FDC277624AE0C590016B700 /* UserInfoVC.swift */,
 			);
 			path = Screens;

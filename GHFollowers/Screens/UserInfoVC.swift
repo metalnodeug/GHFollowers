@@ -65,6 +65,7 @@ class UserInfoVC: UIViewController {
                 DispatchQueue.main.async {
                     self.configureUIElements(with: user)
                 }
+                
             case .failure(let error):
                 self.presentGHFAlertOnMainThread(title: GHFText.badAlert, message: error.rawValue, buttonTitle: "Ok")
 
