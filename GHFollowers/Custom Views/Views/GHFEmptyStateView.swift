@@ -35,7 +35,7 @@ class GHFEmptyStateView: UIView {
         messageLabel.numberOfLines = 3
         messageLabel.textColor = .secondaryLabel
 
-            logoImageView.image = UIImage(named: GHFImage.emptyStateLogo)
+            logoImageView.image = GHFImage.emptyStateLogo
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([

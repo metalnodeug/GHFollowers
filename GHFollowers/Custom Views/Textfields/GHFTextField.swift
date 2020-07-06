@@ -20,23 +20,21 @@ class GHFTextField: UITextField {
     }
 
     private func configure() {
-        self.translatesAutoresizingMaskIntoConstraints = false
-
-        self.layer.cornerRadius = 10
-        self.layer.borderWidth = 2
-        self.layer.borderColor = UIColor.systemGray4.cgColor
-
-        self.textColor = .label
-        self.tintColor = .label
-        self.textAlignment = .center
-        self.font = UIFont.preferredFont(forTextStyle: .title2)
-        self.adjustsFontSizeToFitWidth = true
-        self.minimumFontSize = 12
-
-        self.backgroundColor = .tertiarySystemBackground
-        self.autocorrectionType = .no
-        self.placeholder = "Enter a username"
-        self.returnKeyType = .go
+        translatesAutoresizingMaskIntoConstraints = false
+        layer.cornerRadius = 10
+        layer.borderWidth = 2
+        layer.borderColor = UIColor.systemGray4.cgColor
+        textColor = .label
+        tintColor = .label
+        textAlignment = .center
+        font = UIFont.preferredFont(forTextStyle: .title2)
+        adjustsFontSizeToFitWidth = true
+        minimumFontSize = 12
+        backgroundColor = .tertiarySystemBackground
+        autocorrectionType = .no
+        clearButtonMode = .whileEditing
+        placeholder = "Enter a username"
+        returnKeyType = .go
     }
 
     func showEmptyInputAnimation() {
@@ -60,7 +58,7 @@ class GHFTextField: UITextField {
         borderColor.fromValue = layer.borderColor
         borderColor.toValue = UIColor.systemRed.cgColor
 
-        self.layer.add(borderColor, forKey: nil)
-        self.layer.add(shake, forKey: nil)
+        layer.add(borderColor, forKey: nil)
+        layer.add(shake, forKey: nil)
     }
 }
