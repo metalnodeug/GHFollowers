@@ -30,7 +30,7 @@ class FollowerListVC: GHFDataLoadingVC {
         configureCollectionView()
         configureViewController()
         configureSearchController()
-        getFollower(username: username, page: page)
+        getFollowers(username: username, page: page)
         configureDataSource()
         updateData(on: followers)
     }
@@ -72,10 +72,9 @@ class FollowerListVC: GHFDataLoadingVC {
         searchController.searchBar.placeholder = "Search a username"
         searchController.obscuresBackgroundDuringPresentation = false
         navigationItem.searchController = searchController
-        navigationItem.hidesSearchBarWhenScrolling = false
     }
 
-    private func getFollower(username: String, page: Int) {
+    private func getFollowers(username: String, page: Int) {
         showLoadingView()
         isLoadingMoreFollowers = true
 
@@ -165,7 +164,7 @@ extension FollowerListVC: UICollectionViewDelegate {
         if offsetY > contentHeight - height {
             guard hasMoreFollowers, !isLoadingMoreFollowers else { return }
             page += 1
-            getFollower(username: username, page: page)
+            getFollowers(username: username, page: page)
         }
     }
 
@@ -205,6 +204,6 @@ extension FollowerListVC: UserInfoVCDelegate {
         followers.removeAll()
         filteredFollowers.removeAll()
         collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .top, animated: true)
-        getFollower(username: username, page: page)
+        getFollowers(username: username, page: page)
     }
 }

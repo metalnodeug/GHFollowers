@@ -53,7 +53,7 @@ class GHFUserInfoHeaderVC: UIViewController {
         let textImagePadding: CGFloat = 12
         locationImageView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            avatarImageView.topAnchor.constraint(equalTo: view.topAnchor, constant:     padding),
+            avatarImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: padding),
             avatarImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             avatarImageView.heightAnchor.constraint(equalToConstant: 90),
             avatarImageView.widthAnchor.constraint(equalToConstant: 90),
