@@ -19,18 +19,17 @@ class GHFButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(bgColor: UIColor, title: String) {
-        super.init(frame: .zero)
+    convenience init(bgColor: UIColor, title: String) {
+        self.init(frame: .zero)
         self.backgroundColor = bgColor
         self.setTitle(title, for: .normal)
-        configure()
     }
     
     private func configure() {
-        self.layer.cornerRadius = 10
-        self.setTitleColor(.white, for: .normal)
-        self.titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
-        self.translatesAutoresizingMaskIntoConstraints = false
+        layer.cornerRadius = 10
+        setTitleColor(.white, for: .normal)
+        titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
+        translatesAutoresizingMaskIntoConstraints = false
     }
 
     func set(backgroundColor: UIColor, title: String) {
