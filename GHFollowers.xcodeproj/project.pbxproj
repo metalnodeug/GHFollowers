@@ -43,6 +43,7 @@
 		6FE2B77724B0516300405F0D /* GHFItemInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE2B77624B0516300405F0D /* GHFItemInfoVC.swift */; };
 		6FE2B77924B0551000405F0D /* GHFRepoItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE2B77824B0551000405F0D /* GHFRepoItemVC.swift */; };
 		6FE2B77B24B0585C00405F0D /* GHFFollowerItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE2B77A24B0585C00405F0D /* GHFFollowerItemVC.swift */; };
+		6FEB143924B397340040FA2E /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEB143824B397340040FA2E /* UITableView+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		6FE2B77624B0516300405F0D /* GHFItemInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHFItemInfoVC.swift; sourceTree = "<group>"; };
 		6FE2B77824B0551000405F0D /* GHFRepoItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHFRepoItemVC.swift; sourceTree = "<group>"; };
 		6FE2B77A24B0585C00405F0D /* GHFFollowerItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHFFollowerItemVC.swift; sourceTree = "<group>"; };
+		6FEB143824B397340040FA2E /* UITableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 				6F7DB28724AA1E1C0091E890 /* UIViewController+Ext.swift */,
 				6F9D7C2A24B05DB4006C62B7 /* Date+Ext.swift */,
 				6FB79FF024B3604600ACFA95 /* UIView+Ext.swift */,
+				6FEB143824B397340040FA2E /* UITableView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				6F42F2D424AC84200030ECCB /* UIHelper.swift in Sources */,
 				6F6D44F624AB1C6F00A60D9C /* NetworkManager.swift in Sources */,
 				6FE2B77724B0516300405F0D /* GHFItemInfoVC.swift in Sources */,
+				6FEB143924B397340040FA2E /* UITableView+Ext.swift in Sources */,
 				6F7D7E6524A8095A00A7E32A /* FollowerListVC.swift in Sources */,
 				6F8E942E24A7D64D0019538E /* GHFTextField.swift in Sources */,
 			);
