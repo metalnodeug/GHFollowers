@@ -81,7 +81,7 @@ class UserInfoVC: UIViewController {
     }
 
     private func layoutUI() {
-        let padding: CGFloat = 20
+        let padding: CGFloat = 15
         let itemHeight: CGFloat = 140
 
         itemViews = [headerView,itemViewOne,itemViewTwo, dateLabel]
@@ -107,7 +107,7 @@ class UserInfoVC: UIViewController {
             itemViewTwo.heightAnchor.constraint(equalToConstant: itemHeight),
 
             dateLabel.topAnchor.constraint(equalTo: itemViewTwo.bottomAnchor, constant: padding),
-            dateLabel.heightAnchor.constraint(equalToConstant: 50)
+            dateLabel.heightAnchor.constraint(equalToConstant: 40)
         ])
     }
 
